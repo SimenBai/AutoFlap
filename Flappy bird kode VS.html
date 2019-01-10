@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <canvas id="canvas" width="288" height="512"></canvas> <!-- Først lage et canvas, et rektangel -->
+<script>
+var cvs = document.getElementById("canvas"); //henter canvaset, og lager variabel som forenkkling for senere
+var ctx = getContext("2d"); //få tilgang til å forandre på canvas
+
+var FlappyBird = new Image();//Legger til bildet
+FlappyBird.src="FlappyBird.png"
+
+var audioName = new Audio();//Legger til lydfiler
+audioName.src = "audio/audio.png";
+
+ctx.drawImage(FlappyBird, 100, 150, 50,);//for å tegne bildet i canvas, setter posisjon og form. 
+
+function draw(){ //viser frem bildene på canvaset
+ctx.drawIMage(bg, 0, 0); //først tegner bakgrunnen
+}
+
+https://www.youtube.com/watch?v=L07i4g-zhDA
+
+
+
+
+
+
+</script>
+
+
+</body>
+</html>
