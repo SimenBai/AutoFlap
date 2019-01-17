@@ -13,11 +13,14 @@ function Bird(){//fuglen trenger kun en y-pos
     this.lift = -15;
     this.velocity = 0;
 
+    this.angle = 0;
+
     this.show = function() { //Tegne fuglen
         fill(225);
         ellipse(this.x, this.y, 32, 32);//fuglen blir først en sirkel
+    
     }
-
+    
     this.up = function(){
         this.velocity += this.lift;
     }
