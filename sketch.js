@@ -22,6 +22,7 @@ function draw(){
     bird.update();
     bird.show();
 
+
     if (frameCount % 100 == 0) {
         pipes.push(new Pipe());
     }
@@ -29,9 +30,17 @@ function draw(){
     for(var i = 0; i < pipes.length; i++) {
         pipes[i].show();
         pipes[i].update();
+
+    if (pipes[i].offscreen()) {
+        pipes.splice(i, 1);
+    }
+    
+    if (pipes[i].hits(bird)) {
+        console.log("HIT");
+        restart();
     }
 
-
+}
     //Draws the bird image sprite
     drawBirdImage();
 }
@@ -65,6 +74,9 @@ function drawBirdImage(){
 
     //Bilde som skal brukes, lokalisasjonen (0,0) siden translate funksjonen, 64 høy, 64 bred.
     image(img, 0 , 0  , 64 , 64);
+    rotate(-bird.angle); 
+    translate(-bird.x, -bird.y);
+
 }
 
 function keyPressed(){ //Trykke SPACE for å fly
@@ -72,4 +84,9 @@ function keyPressed(){ //Trykke SPACE for å fly
         bird.up();
         //console.log("SPACE"); SJEKKE OM TASTEN FUNKER
     }
+}
+
+function restart(){
+    bird = new Bird();
+    pipes = [];
 }
