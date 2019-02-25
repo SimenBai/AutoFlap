@@ -8,16 +8,18 @@
 function Bird(){//fuglen trenger kun en y-pos
     this.y = height/2; //starter fuglen i midten av vinduet
     this.x = 64;
+    this.width = 32;
+    this.height = 32;
     
     this.gravity = 0.7;
-    this.lift = -15;
+    this.lift = -17;
     this.velocity = 0;
 
     this.angle = 0;
 
     this.show = function() { //Tegne fuglen
         fill(225);
-        ellipse(this.x, this.y, 32, 32);//fuglen blir først en sirkel
+        //ellipse(this.x, this.y, 32, 32);//fuglen blir først en sirkel
     
     }
     
