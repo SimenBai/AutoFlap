@@ -17,7 +17,7 @@ function setup() {
     
     img = loadImage("FlappyBird.png");
     imgPipe = loadImage("pipe.png");
-    bg = loadImage('flappy-bird-background-png-6.png');
+    bg = loadImage('Bakground.jpg');
 
     //Kjører når siden starter
     createCanvas(480, 400);
