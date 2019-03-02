@@ -28,8 +28,8 @@ function Bird(brain, isAI) {//fuglen trenger kun en y-pos
     if (brain && brain instanceof NeuralNetwork) {
         this.brain = brain.copy();
     } else {
-        //5 input 8 hidden 2 output
-        this.brain = new NeuralNetwork(5, 8, 2)
+        //5 input 6 hidden 2 output
+        this.brain = new NeuralNetwork(5, 10, 2)
     }
 
 
