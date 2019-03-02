@@ -47,10 +47,12 @@ function sound(src) {
 function draw(){
     //Kjører 60 ganger i sekundet
     imageMode(CORNER);
-    image(bg, 0, 0, width, height)
+    image(bg, 0, 0, width, height);
     bird.update();
     bird.show();
 
+    //Draws the bird image sprite
+    drawBirdImage();
 
     if (frameCount % 100 == 0) {
         pipes.push(new Pipe());
@@ -79,9 +81,6 @@ function draw(){
             restart();
         }
     }
-    
-    //Draws the bird image sprite
-    drawBirdImage();
     drawScore();
     drawHighScore();
 }  

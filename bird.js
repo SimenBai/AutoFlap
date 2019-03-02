@@ -18,10 +18,11 @@ function Bird(){//fuglen trenger kun en y-pos
     this.angle = 0;
 
     this.show = function() { //Tegne fuglen
+        stroke(255);
         fill(225);
         //ellipse(this.x, this.y, 32, 32);//fuglen blir først en sirkel
     
-    }
+    };
     
     this.up = function(){
         this.velocity += this.lift;
